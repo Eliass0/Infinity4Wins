@@ -12,9 +12,9 @@ namespace game {
 class GameState {
 private:
     std::pmr::vector<Point> points[2];
-    [[nodiscard]] bool checkWin(int player, const Point* origin) const;
+    [[nodiscard]] bool checkWin(int player, const Point& origin) const;
 public:
-    int place(int player, int row_x);
+    bool place(int player, int row_x);
 };
 
 } // game
